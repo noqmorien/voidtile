@@ -50,6 +50,7 @@ tooltip {
 
 /* Workspaces */
 #workspaces button {
+    padding: 4px 2px 4px 2px;
     margin-left: 0px;
     margin-right: 0px;
     color: #d699b6; /* Purple/Iris default */

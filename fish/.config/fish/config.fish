@@ -1,6 +1,11 @@
 if status is-interactive
 end
 
+function fish_user_key_bindings
+    fish_default_key_bindings -M insert
+    fish_vi_key_bindings --no-erase insert
+end
+
 function setup_user_path
     fish_add_path ~/.local/bin
     fish_add_path ~/.cargo/bin
@@ -8,6 +13,11 @@ function setup_user_path
 end
 
 function setup_aliases
+    
+    if command -q fnm
+        fnm env --use-on-cd --shell fish | source
+    end
+
     if command -q tmux
         alias tm="tmux"
         alias tma="tmux attach"
