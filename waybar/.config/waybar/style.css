@@ -33,7 +33,7 @@ tooltip {
 }
 
 /* Box */
-#custom-arch, #workspaces, #clock, #cpu, #memory, #disk, #pulseaudio, #battery, #backlight, #network, #tray {
+#custom-arch, #workspaces, #clock, #cpu, #memory, #disk, #pulseaudio, #battery, #backlight, #network, #tray, #mpris {
     color: #d3c6aa; /* Text */
     background: #2f383e; /* Background */
     font-size: 12px;
@@ -62,5 +62,10 @@ tooltip {
 
 #workspaces button.focused {
     color: #e67e80; /* Red / Love active */
+}
+
+/* MPRIS */
+#mpris {
+  font-size: 11px;
 }
 

@@ -3,8 +3,19 @@
   "reload_style_on_change": true,
   "gtk-layer-shell": true,
   "modules-left": ["custom/arch", "sway/workspaces"],
-  "modules-center": [],
+  "modules-center": ["mpris"],
   "modules-right": ["cpu", "memory", "disk", "backlight", "pulseaudio", "battery", "tray", "clock"],
+
+  "mpris": {
+    "format": "{player_icon} {title} {artist}",
+    "format-paused": "<span color='#E67E80'></span> <span color='#4F585E'>{title}</span>",
+    "title-len": 19,
+    "player-icons":{
+      "default": "",
+      "mpv": "󰝚",
+      "firefox": "<span color='#E69875'></span>"
+    }
+  },
 
   "custom/arch": {
     "format": "<span color='#a7c080'></span> ",

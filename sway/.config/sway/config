@@ -19,19 +19,20 @@ exec_always autotiling
 # part of sway fix session issues
 exec_always --no-startup-id dbus-update-activation-environment --all
 
-set $mod Mod4
 
-# Home row direction keys, like vim
+# ====================================
+# Variable
+# ====================================
+set $mod Mod4
 set $left h
 set $down j
 set $up k
 set $right l
-
-# Your preferred terminal emulator
 set $term foot
-
-# Your preferred application launcher
 set $menu wofi --show drun -n
+set $global_gap 1
+set $global_border 2
+set $global_rounded 0
 
 ### Output configuration
 #
@@ -269,15 +270,15 @@ bindsym $mod+Shift+Print exec  $HOME/.local/bin/voidot ss --save-select
 
 # include /etc/sway/config.d/*
 
+# ====================================
 # Styles
-default_border pixel 2
+# ====================================
+default_border pixel $global_border
 
-
-
-# Styles and gap
-smart_gaps on
-gaps inner 2
-gaps outer 1
+# Gaps
+smart_gaps off
+gaps inner $global_gap
+gaps outer $global_gap
 
 # Set border colors (normal, focused, urgent, background)
 client.focused          #a7c080 #a7c080 #a7c080 #a7c080
@@ -285,7 +286,38 @@ client.focused_inactive #2f383e #2f383e #2f383e #2f383e
 client.unfocused        #2f383e #2f383e #2f383e #2f383e
 client.urgent           #e67e80 #e67e80 #e67e80 #e67e80
 
+# ====================================
+# Styles for SwayFX
+#
+# Disable these options if you use
+# original sway
+# ====================================
+# Blur
+blur enable
+blur_xray enable
+blur_radius 10
+blur_passes 3
 
-# window rules
+# Radius
+corner_radius 3
+
+# Shadow
+shadows enable
+shadows_on_csd enable
+shadow_blur_radius $global_rounded
+
+layer_effects "waybar" {
+    blur enable;
+    # blur_xray enable;
+    # blur_ignore_transparent enable;
+    shadows enable;
+    # corner_radius 20;
+}
+
+
+
+# ====================================
+# Windows Rules
+# ====================================
 for_window [app_id="wofi"] floating enable, move position center
 for_window [app_id="app.zen_browser.zen" title="Picture-in-Picture"] floating enable, move position center
