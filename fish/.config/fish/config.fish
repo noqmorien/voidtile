@@ -17,6 +17,11 @@ function setup_aliases
         alias cat="bat --paging=never --style=plain --color=auto"
     end
 
+    if command -q eza
+        alias ll="eza --git --git-repos --icons --long --header --smart-group"
+        alias ls="eza --git --git-repos --icons --smart-group"
+    end
+
     if command -q exa
         alias ll="exa --git --git-repos --icons --long --header --smart-group"
         alias ls="exa --git --git-repos --icons --smart-group"

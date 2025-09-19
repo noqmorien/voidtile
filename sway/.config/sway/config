@@ -5,6 +5,7 @@ exec --no-startup-id pipewire
 exec --no-startup-id nm-applet
 exec --no-startup-id swww-daemon
 exec --no-startup-id waybar
+exec --no-startup-id swaync
 exec --no-startup-id swww restore
 
 
@@ -233,8 +234,12 @@ bindsym --locked XF86AudioMicMute exec pactl set-source-mute \@DEFAULT_SOURCE@ t
 # Special keys to adjust brightness via brightnessctl
 bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
+
 # Special key to take a screenshot with grim
-bindsym Print exec grim
+bindsym $mod+Print exec  $HOME/.local/bin/voidot ss --full
+bindsym Print exec  $HOME/.local/bin/voidot ss --full-select
+bindsym Shift+Print exec  $HOME/.local/bin/voidot ss --save-full
+bindsym $mod+Shift+Print exec  $HOME/.local/bin/voidot ss --save-select
 
 #
 # Status Bar:
@@ -244,13 +249,13 @@ bindsym Print exec grim
 # include /etc/sway/config.d/*
 
 # Styles
-default_border pixel 1
+default_border pixel 2
 
 
 
 # Styles and gap
-smart_gaps off
-gaps inner 1
+smart_gaps on
+gaps inner 2
 gaps outer 1
 
 # Set border colors (normal, focused, urgent, background)
