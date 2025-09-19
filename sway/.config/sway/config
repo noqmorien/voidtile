@@ -83,8 +83,8 @@ input type:touchpad {
 }
 
 input type:keyboard {
-        xkb_layout "us"
-    }
+    xkb_layout "us"
+}
 
 ### Key bindings
 #
@@ -268,7 +268,7 @@ bindsym $mod+Shift+Print exec  $HOME/.local/bin/voidot ss --save-select
 # ====================================
 # Styles
 # ====================================
-default_border pixel 3
+default_border pixel 0
 
 # Gaps
 smart_gaps off
