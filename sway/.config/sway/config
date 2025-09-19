@@ -15,7 +15,7 @@ exec --no-startup-id swaync
 exec --no-startup-id swww restore
 
 
-exec_always autotiling
+exec_always --no-startup-id autotiling
 # part of sway fix session issues
 exec_always --no-startup-id dbus-update-activation-environment --all
 
@@ -30,9 +30,6 @@ set $up k
 set $right l
 set $term foot
 set $menu wofi --show drun -n
-set $global_gap 0
-set $global_border 2
-set $global_rounded 0
 
 ### Output configuration
 #
@@ -271,12 +268,12 @@ bindsym $mod+Shift+Print exec  $HOME/.local/bin/voidot ss --save-select
 # ====================================
 # Styles
 # ====================================
-default_border pixel $global_border
+default_border pixel 3
 
 # Gaps
-smart_gaps on
-gaps inner 1
-gaps outer 1
+smart_gaps off
+gaps inner 8
+gaps outer 4
 
 # Set border colors (normal, focused, urgent, background)
 client.focused          #a7c080 #a7c080 #a7c080 #a7c080
@@ -290,19 +287,25 @@ client.urgent           #e67e80 #e67e80 #e67e80 #e67e80
 # Disable these options if you use
 # original sway
 # ====================================
+
+# Radius
+corner_radius 6
+
 # Blur
 blur enable
 blur_xray enable
-blur_radius 10
-blur_passes 3
-
-# Radius
-corner_radius 0
+blur_radius 5
+blur_passes 2
+blur_brightness 2
+blur_contrast 2
+blur_saturation 2
+blur_noise 0.084
 
 # Shadow
 shadows enable
 shadows_on_csd enable
-shadow_blur_radius $global_rounded
+shadow_offset 4 2
+shadow_blur_radius 10
 
 layer_effects "waybar" {
     blur enable;
@@ -317,5 +320,5 @@ layer_effects "waybar" {
 # ====================================
 # Windows Rules
 # ====================================
-for_window [app_id="wofi"] floating enable, move position center; border pixel 1; corner_radius 8
+for_window [app_id="wofi"] floating enable, move position center; border none
 for_window [app_id="app.zen_browser.zen" title="Picture-in-Picture"] floating enable, move position center
