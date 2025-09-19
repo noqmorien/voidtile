@@ -33,7 +33,7 @@ tooltip {
 }
 
 /* Box */
-#custom-arch, #workspaces, #clock, #cpu, #memory, #disk, #pulseaudio, #battery, #backlight, #network, #tray, #mpris {
+#custom-arch, #window, #workspaces, #clock, #cpu, #memory, #disk, #pulseaudio, #battery, #backlight, #network, #tray, #mpris {
     color: #d3c6aa; /* Text */
     background: #2f383e; /* Background */
     font-size: 12px;
