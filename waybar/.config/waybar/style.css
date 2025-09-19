@@ -66,6 +66,7 @@ tooltip {
 
 /* MPRIS */
 #mpris {
-  font-size: 11px;
+    font-family: 'RobotoMono Nerd Font', 'Symbols Nerd Font Mono';
+    font-size: 13px;
 }
 

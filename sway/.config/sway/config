@@ -30,8 +30,8 @@ set $up k
 set $right l
 set $term foot
 set $menu wofi --show drun -n
-set $global_gap 1
-set $global_border 2
+set $global_gap 0
+set $global_border 1
 set $global_rounded 0
 
 ### Output configuration
@@ -192,9 +192,9 @@ bindsym $mod+b splith
 bindsym $mod+v splitv
 
 # Switch the current container between different layout styles
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+# bindsym $mod+s layout stacking
+# bindsym $mod+w layout tabbed
+# bindsym $mod+e layout toggle split
 
 # Make the current focus fullscreen
 bindsym $mod+f fullscreen
@@ -229,10 +229,10 @@ mode "resize" {
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    bindsym $left resize shrink width 10px
+    bindsym $right resize shrink width 10px
     bindsym $down resize grow height 10px
     bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
+    bindsym $left resize grow width 10px
 
     # Ditto, with arrow keys
     bindsym Left resize shrink width 10px
@@ -244,7 +244,9 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+
 bindsym $mod+r mode "resize"
+
 #
 # Utilities:
 #
@@ -263,10 +265,6 @@ bindsym Print exec  $HOME/.local/bin/voidot ss --full-select
 bindsym Shift+Print exec  $HOME/.local/bin/voidot ss --save-full
 bindsym $mod+Shift+Print exec  $HOME/.local/bin/voidot ss --save-select
 
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
 
 # include /etc/sway/config.d/*
 
@@ -276,9 +274,9 @@ bindsym $mod+Shift+Print exec  $HOME/.local/bin/voidot ss --save-select
 default_border pixel $global_border
 
 # Gaps
-smart_gaps off
-gaps inner $global_gap
-gaps outer $global_gap
+smart_gaps on
+gaps inner 1
+gaps outer 1
 
 # Set border colors (normal, focused, urgent, background)
 client.focused          #a7c080 #a7c080 #a7c080 #a7c080
@@ -319,5 +317,5 @@ layer_effects "waybar" {
 # ====================================
 # Windows Rules
 # ====================================
-for_window [app_id="wofi"] floating enable, move position center
+for_window [app_id="wofi"] floating enable, move position center; border pixel 1; corner_radius 8
 for_window [app_id="app.zen_browser.zen" title="Picture-in-Picture"] floating enable, move position center
