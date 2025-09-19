@@ -7,13 +7,14 @@
   "modules-right": ["cpu", "memory", "disk", "backlight", "pulseaudio", "battery", "tray", "clock"],
 
   "mpris": {
-    "format": "{player_icon}  {title} {artist}",
+    "format": "{player_icon}  {title} - {artist}",
     "format-paused": "<span color='#E67E80'></span> <span color='#4F585E'>{title}</span>",
     "title-len": 19,
     "player-icons":{
       "default": "",
       "mpv": "󰝚",
-      "firefox": "<span color='#E69875'></span>"
+      "firefox": "<span color='#E69875'></span>",
+      "spotify": "<span color='#83C092'></span>"
     }
   },
 
