@@ -1,0 +1,78 @@
+@define-color base0   #2f383e;
+@define-color base1   #374247;
+@define-color content #d3c6aa;
+@define-color accent  #7fbbb3;
+@define-color primary #a7c080;
+
+
+window {
+    padding: 20px;
+    color: transparent;
+    border-color: @primary;
+    border-radius: 6px;
+    background-color: transparent;
+}
+
+#input {
+    margin: 12px;
+    padding: 4px;
+    border-radius: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font: 11px "MartianMono Nerd Font";
+    color: @content;
+    background: @base1;
+    font-weight: 400;
+    border: 1px solid @primary;
+    outline: none;
+}
+
+#input:focus {
+    border-color: @background;
+    outline: none;
+}
+
+#filter {
+}
+
+#inner-box {
+    margin: 8px;
+    background-color: @base0;
+    border: none;
+}
+
+#outer-box {
+    margin: 0px;
+    border: none;
+    background-color: @base0;
+}
+
+#entry {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-bottom: 12px;
+    margin-top: 6px;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+#entry:selected {
+    background-color: @primary;
+    color: @content;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+}
+
+#text {
+    padding-right: 4px;
+    padding-left: 8px;
+    color: @content;
+    font: 11px "MartianMono Nerd Font";
+}
+
+#text:selected {
+    color: @content;
+}

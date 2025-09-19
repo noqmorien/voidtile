@@ -1,0 +1,29 @@
+#!/usr/bin/python3
+import subprocess
+
+# List opsi menu
+options = ["Shutdown", "Reboot", "Logout", "Suspend"]
+
+# Gabung jadi string untuk wofi
+menu_str = "\n".join(options)
+
+# Panggil wofi dmenu
+try:
+    choice = subprocess.run(
+        ["wofi", "--dmenu", "--prompt", "Power Menu", "--style", "~/.config/wofi/powermenu.css"],
+        input=menu_str.encode(),
+        stdout=subprocess.PIPE,
+        check=True
+    ).stdout.decode().strip()
+except subprocess.CalledProcessError:
+    exit(1)
+
+# Jalankan action sesuai pilihan
+if choice == "Shutdown":
+    subprocess.run(["sudo", "poweroff"])
+elif choice == "Reboot":
+    subprocess.run(["sudo", "reboot"])
+elif choice == "Logout":
+    subprocess.run(["hyprctl", "dispatch", "exit"])
+elif choice == "Suspend":
+    subprocess.run(["sudo", "pm-suspend"])

@@ -1,0 +1,65 @@
+* {
+    border: none;
+    font-family: 'MartianMono Nerd Font', 'Symbols Nerd Font Mono';
+    font-size: 12px;
+    min-height: 0px;
+}
+
+window#waybar {
+    background: #2f383e; /* Everforest Medium background */
+    margin: 0px 12px 0px 12px;
+}
+
+window#waybar > box {
+}
+
+tooltip {
+    background: #2f383e;
+    color: #d3c6aa;
+}
+
+/* Rounded Right */
+#custom-arch, #workspaces, #clock, #network, #tray {
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    margin-right: 8px;
+}
+
+/* Rounded Left */
+#custom-arch, #workspaces, #clock, #cpu {
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
+    margin-left: 8px;
+}
+
+/* Box */
+#custom-arch, #workspaces, #clock, #cpu, #memory, #disk, #pulseaudio, #battery, #backlight, #network, #tray {
+    color: #d3c6aa; /* Text */
+    background: #2f383e; /* Background */
+    font-size: 12px;
+    padding: 4px 6px 4px 6px;
+}
+
+/* Custom Arch */
+#custom-arch {
+    color: #a7c080; /* Green / Arch logo */
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 14px;
+}
+
+/* Workspaces */
+#workspaces button {
+    margin-left: 0px;
+    margin-right: 0px;
+    color: #d699b6; /* Purple/Iris default */
+}
+
+#workspaces button:hover {
+    color: #e67e80; /* Red / Love on hover */
+}
+
+#workspaces button.focused {
+    color: #e67e80; /* Red / Love active */
+}
+
