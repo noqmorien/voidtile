@@ -31,7 +31,7 @@ set $right l
 set $term foot
 set $menu wofi --show drun -n
 set $global_gap 0
-set $global_border 1
+set $global_border 2
 set $global_rounded 0
 
 ### Output configuration
@@ -297,7 +297,7 @@ blur_radius 10
 blur_passes 3
 
 # Radius
-corner_radius 3
+corner_radius 0
 
 # Shadow
 shadows enable
