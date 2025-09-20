@@ -1,0 +1,59 @@
+# Background
+image=$HOME/.config/wallpaper/lock.png
+color=2d353b
+
+# Font
+font=MartianMono Nerd Font Mono
+font-size=14
+
+# Indicator
+indicator-radius=58
+indicator-thickness=8
+indicator-idle-visible
+
+# Inside
+inside-color=2d353b
+inside-clear-color=83c092
+inside-caps-lock-color=7fbbb3
+inside-ver-color=7fbbb3
+inside-wrong-color=e67e80
+
+# Ring
+ring-color=343f44
+ring-clear-color=83c092
+ring-caps-lock-color=7fbbb3
+ring-ver-color=7fbbb3
+ring-wrong-color=e67e80
+
+# Line
+line-color=343f44
+line-clear-color=83c092
+line-caps-lock-color=7fbbb3
+line-ver-color=7fbbb3
+line-wrong-color=e67e80
+
+# Key highlight
+key-hl-color=a7c080
+bs-hl-color=e67e80
+caps-lock-key-hl-color=dbbc7f
+caps-lock-bs-hl-color=e69875
+
+# Separator
+separator-color=7a8478
+
+# Text
+text-color=d3c6aa
+text-clear-color=2D353B
+text-caps-lock-color=2D353B
+text-ver-color=2D353B
+text-wrong-color=2D353B
+
+# Layout box
+layout-bg-color=343f44
+layout-border-color=7a8478
+layout-text-color=d3c6aa
+
+show-failed-attemps
+show-layout
+scalling fill
+tiling

@@ -1,0 +1,15 @@
+(defwidget activate-void[]
+    (box
+        :orientation "v"
+        :halign "start"
+        :valign "start"
+        (label :xalign 0 :markup "<span font_size=\"large\">Activate Void Linux</span>")
+        (label :xalign 0 :text "󰢻  Go to Settings to activate void linux")
+    )
+)
+
+(defwindow activate-void
+    :monitor 0
+    :stacking "fg"
+    :geometry (geometry :x "8px" :y "32px" :width "250px" :anchor "bottom right")
+    (activate-void))

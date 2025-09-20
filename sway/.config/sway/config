@@ -1,4 +1,17 @@
 # ====================================
+# Variable
+# ====================================
+set $mod Mod4
+set $left h
+set $down j
+set $up k
+set $right l
+set $term foot
+set $menu wofi --show drun -n
+set $lock swaylock
+
+
+# ====================================
 # Autostart
 # ====================================
 
@@ -10,26 +23,21 @@ exec --no-startup-id xdg-desktop-portal-gtk
 exec --no-startup-id pipewire 
 exec --no-startup-id nm-applet
 exec --no-startup-id swww-daemon
+exec --no-startup-id eww daemon
 exec --no-startup-id waybar
 exec --no-startup-id swaync
-exec --no-startup-id swww restore
+exec --no-startup-id swww img $HOME/.config/wallpaper/main.png
+exec swayidle -w \
+            timeout 300 $lock \
+            before-sleep $lock
 
 
 exec_always --no-startup-id autotiling
 # part of sway fix session issues
 exec_always --no-startup-id dbus-update-activation-environment --all
+# exec_always --no-startup-id eww daemon
 
 
-# ====================================
-# Variable
-# ====================================
-set $mod Mod4
-set $left h
-set $down j
-set $up k
-set $right l
-set $term foot
-set $menu wofi --show drun -n
 
 ### Output configuration
 #
@@ -98,6 +106,9 @@ bindsym $mod+q kill
 
 # Start your launcher
 bindsym $mod+d exec_always --no-startup-id $menu
+
+# Lock
+bindsym $mod+Shift+p exec $lock
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
@@ -313,10 +324,15 @@ layer_effects "waybar" {
     blur_brightness 0.8596
     blur_contrast 1.245
     blur_noise 0.0186
-    # blur_xray enable;
+    blur_xray enable
     # blur_ignore_transparent enable;
-    shadows enable;
+    shadows enable
     # corner_radius 20;
+}
+
+for_window [app_id="waylock"] {
+    opacity 0.1
+    shadows enable
 }
 
 
