@@ -10,6 +10,8 @@ function setup_user_path
     fish_add_path ~/.local/bin
     fish_add_path ~/.cargo/bin
     fish_add_path ~/.bun/bin
+    # this for personal packages
+    fish_add_path /opt/pkgs/bin
 end
 
 function setup_aliases

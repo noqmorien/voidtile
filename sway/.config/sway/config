@@ -268,7 +268,7 @@ bindsym $mod+Shift+Print exec  $HOME/.local/bin/voidot ss --save-select
 # ====================================
 # Styles
 # ====================================
-default_border pixel 3
+default_border pixel 1
 
 # Gaps
 smart_gaps off
@@ -289,7 +289,7 @@ client.urgent           #e67e80 #e67e80 #e67e80 #e67e80
 # ====================================
 
 # Radius
-corner_radius 6
+corner_radius 1
 
 # Blur
 blur enable
