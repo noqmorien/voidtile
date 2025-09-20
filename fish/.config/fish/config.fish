@@ -15,6 +15,12 @@ function setup_user_path
 end
 
 function setup_aliases
+
+    if command -q distrobox
+        alias dc="distrobox create"
+        alias de="distrobox enter"
+        alias ds="podman kill"
+    end
     
     if command -q fnm
         fnm env --use-on-cd --shell fish | source

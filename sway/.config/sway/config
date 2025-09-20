@@ -26,7 +26,7 @@ exec --no-startup-id swww-daemon
 exec --no-startup-id eww daemon
 exec --no-startup-id waybar
 exec --no-startup-id swaync
-exec --no-startup-id swww img $HOME/.config/wallpaper/main.png
+exec --no-startup-id swww img --transition-type "any" $HOME/.config/wallpaper/main.png
 exec swayidle -w \
             timeout 300 $lock \
             before-sleep $lock
