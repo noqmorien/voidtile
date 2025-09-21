@@ -283,7 +283,7 @@ default_border pixel 1
 
 # Gaps
 smart_gaps off
-gaps inner 8
+gaps inner 16
 gaps outer 12
 
 # Set border colors (normal, focused, urgent, background)
@@ -349,10 +349,12 @@ for_window [app_id="foot"] {
     blur_brightness 0.85
     opacity 0.9;
 }
+for_window [title="discord"] opacity 0.95
 
 # Floating
 for_window [app_id="java"] floating enable, move position center; opacity 1.0;
 for_window [app_id="nm-connection-editor"] floating enable; move position center; opacity 1.0;
 for_window [app_id="app.zen_browser.zen" title="Picture-in-Picture"] floating enable, move position center; opacity 1.0;
+
 
 
