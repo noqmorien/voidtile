@@ -1,15 +1,16 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
 add_newline = false
 continuation_prompt = "[󰞷](dimmed white)[](bold dimmed white)[](bold dimmed magenta)[󰅂](bold dimmed blue)"
 
-right_format = """
-"""
+right_format = """"""
 
 [character]
-success_symbol = "[](bold dimmed white)[](bold white)[](bold magenta)[󰅂](bold blue)"
-error_symbol = "[](bold dimmed white)[](bold white)[](bold magenta)[](bold red)"
+success_symbol = "[󰮺](bold green)"
+error_symbol = "[󰮺](bold red)"
 
 [package]
-disabled = true
+disabled = false
 
 [git_branch]
 symbol = " "
@@ -45,7 +46,7 @@ format = "$all_status$ahead_behind"
 
 [hostname]
 ssh_only = false
-format =  "on [$hostname](bold cyan) "
+format =  "on [](bold blue) "
 trim_at = ".localdomain"
 disabled = false
 
@@ -66,14 +67,14 @@ time_format = "%T"
 [username]
 style_user = "white bold"
 style_root = "black bold"
-format = "[$user]($style) "
+format = "[](green bold) [$user]($style) "
 disabled = false
 show_always = true
 
 [directory]
-style = "bold blue"
 truncation_length = 2
 truncation_symbol = "./"
+disabled = false
 
 [rust]
 symbol = ""

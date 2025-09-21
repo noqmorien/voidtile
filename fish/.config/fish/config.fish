@@ -46,11 +46,16 @@ function setup_aliases
     end
 end
 
+function starship_transient_prompt_func
+    starship module character
+end
+
 function fish_greeting
     setup_user_path
     setup_aliases
     if command -q starship
         starship init fish | source
+        enable_transience
     end
     if command -q fastfetch
         fastfetch
