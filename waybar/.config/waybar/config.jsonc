@@ -4,7 +4,7 @@
   "gtk-layer-shell": true,
   "modules-left": ["custom/arch", "sway/workspaces"],
   "modules-center": ["mpris"],
-  "modules-right": ["cpu", "memory", "disk", "backlight", "pulseaudio", "battery", "tray", "clock"],
+  "modules-right": ["tray", "backlight", "pulseaudio", "battery", "network", "custom/search", "custom/quick-panel", "clock"],
 
   "mpris": {
     "format": "{player_icon}  {title} - {artist}",
@@ -35,13 +35,13 @@
     "tooltip": false,
     "all-output": false,
     "format-icons": {
-      "focused": "<span color='#a7c080'><b></b></span>",
-      "urgent": "<span color='#dbbc7f'><b></b></span>",
-      "1": "<span color='#7fbbb3'><b></b></span>",      // Terminal
-      "2": "<span color='#e67e80'><b></b></span>",      // Browser
-      "3": "<span color='#83c092'><b></b></span>",      // Code
-      "4": "<span color='#a7c080'><b></b></span>",      // Debug
-      "5": "<span color='#d699b6'><b></b></span>"       // Games
+      "focused": "",
+      "urgent": "",
+      "2": "",      // Terminal
+      "3": "",      // Code
+      "4": "",      // Debug
+      "1": "",      // Browser
+      "5": ""       // Games
     },
     "persistent-workspaces": {
       "1": [], "2": [], "3": [], "4": [], "5": []
@@ -90,7 +90,7 @@
 
   "backlight": {
     "interval": 1,
-    "format": "{icon}  {percent}%",
+    "format": "{icon} {percent}%",
     "tooltip-format": "{percent}%",
     "format-icons": [
       "<span color='#dbbc7f66'></span>",
@@ -108,7 +108,7 @@
 
   "pulseaudio": {
     "interval": 1,
-    "format": "<span color='#7fbbb3'>{icon}</span>  {volume}%",
+    "format": "<span color='#7fbbb3'>{icon}</span> {volume}%",
     "format-muted": "<span color='#4b565c'></span>",
     "format-icons": {
       "headphone": "",
@@ -130,24 +130,38 @@
       "<span color='#a7c080'>󰂀</span>",
       "<span color='#a7c080'>󰂁</span>",
       "<span color='#a7c080'>󰂂</span>",
-      "<span color='#7fbbb3'>󱟢</span>"
+      "<span color='#83C092'>󱟢</span>"
     ],
     "format-charging": "<span color='#d699b6'>󰂄</span> {capacity}%"
   },
 
+  "custom/search": {
+    "format": "<span color='#D3C6AA'></span>",
+    "tooltip": false,
+    "on-click": "wofi --show drun -n"
+  },
+
+  "custom/quick-panel": {
+    "format": "<span color='#D3C6AA'>󰨚</span>",
+    "tooltip": false,
+    "on-click": "swaync-client --toggle-panel"
+  },
+
   "network": {
     "interval": 3,
-    "interface": "wlan0",
-    "format": "{ifname}",
-    "format-wifi": "<span color='#83c092'></span>  {essid}",
-    "max-length": 12,
+    "interface": "wlp2s0",
+    "format": "{}",
+    "format-wifi": "<span color='#83C092'></span>",
     "format-ethernet": "{ipaddr}/{cidr}",
-    "format-disconnected": ""
+    "tooltip-format": "<span size='7pt'> {bandwidthDownBytes}</span> <span size='7pt'> {bandwidthUpBytes}</span>",
+    "format-disconnected": "",
+    "on-click-right": "nm-connection-editor -c",
+    "on-click": "nm-connection-editor"
   },
 
   "clock": {
     "interval": 30,
-    "format": "<span color='#d699b6'></span>  {:%H:%M %p}",
+    "format": "{:%a %d %b %I:%M %p}",
     "tooltip": true,
     "tooltip-format": "{calendar}",
     "calendar": {

@@ -16,6 +16,10 @@ end
 
 function setup_aliases
 
+    if command -q nvim
+        alias v="nvim"
+    end
+
     if command -q distrobox
         alias dc="distrobox create"
         alias de="distrobox enter"

@@ -22,22 +22,31 @@ tooltip {
 #custom-arch, #workspaces, #clock, #network, #tray {
     border-top-right-radius: 1px;
     border-bottom-right-radius: 1px;
-    margin-right: 8px;
+    margin-right: 4px;
 }
 
 /* Rounded Left */
 #custom-arch, #workspaces, #clock, #cpu {
     border-top-left-radius: 1px;
     border-bottom-left-radius: 1px;
-    margin-left: 8px;
+    margin-left: 4px;
+}
+
+#custom-search {
+    margin-left: 6px;
+    margin-right: 8px;
 }
 
 /* Box */
-#custom-arch, #window, #workspaces, #clock, #cpu, #memory, #disk, #pulseaudio, #battery, #backlight, #network, #tray, #mpris {
+#custom-arch, #custom-quick-panel, #custom-search, #window, #workspaces, #clock, #cpu, #memory, #disk, #pulseaudio, #battery, #backlight, #network, #tray, #mpris {
     color: #d3c6aa; /* Text */
     background: #2f383e; /* Background */
-    font-size: 12px;
+    font-size: 13px;
     padding: 4px 6px 4px 6px;
+}
+
+#tray .nm-applet {
+    color: #2f383e;
 }
 
 /* Custom Arch */
@@ -53,15 +62,16 @@ tooltip {
     padding: 4px 2px 4px 2px;
     margin-left: 0px;
     margin-right: 0px;
-    color: #d699b6; /* Purple/Iris default */
+    color: #D3C6AA;
 }
 
 #workspaces button:hover {
-    color: #e67e80; /* Red / Love on hover */
+    background: #2f383e;
 }
 
 #workspaces button.focused {
-    color: #e67e80; /* Red / Love active */
+    color: #83C092; /* Red / Love active */
+    background: #2f383e;
 }
 
 /* MPRIS */

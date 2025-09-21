@@ -13,10 +13,10 @@ error_symbol = "[󰮺](bold red)"
 disabled = false
 
 [git_branch]
-symbol = " "
+symbol = "[](green) "
 truncation_length = 4
 truncation_symbol = ""
-style = "bold megenta"
+style = "bold magenta"
 
 [git_commit]
 commit_hash_length = 4
@@ -67,7 +67,7 @@ time_format = "%T"
 [username]
 style_user = "white bold"
 style_root = "black bold"
-format = "[](green bold) [$user]($style) "
+format = "[](green bold green) [$user]($style) "
 disabled = false
 show_always = true
 
