@@ -73,7 +73,7 @@ show_always = true
 
 [directory]
 truncation_length = 2
-truncation_symbol = "./"
+# truncation_symbol = "./"
 disabled = false
 
 [rust]
