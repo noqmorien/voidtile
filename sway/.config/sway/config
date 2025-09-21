@@ -26,7 +26,7 @@ exec --no-startup-id swww-daemon
 exec --no-startup-id eww daemon
 exec --no-startup-id waybar
 exec --no-startup-id swaync
-exec --no-startup-id swww img --transition-type "any" $HOME/.config/wallpaper/main.png
+exec --no-startup-id swww img --transition-type "any" $HOME/.config/wallpaper/third.png
 exec swayidle -w \
             timeout 300 $lock \
             before-sleep $lock
@@ -307,8 +307,8 @@ blur enable
 blur_xray true
 blur_radius 2
 blur_passes 5
-blur_brightness 0.3496
-blur_contrast 1.45
+blur_brightness 0.789
+blur_contrast 1.045
 blur_noise 0.0186
 
 # Shadow
@@ -318,11 +318,11 @@ shadow_offset 4 2
 shadow_blur_radius 10
 
 layer_effects "waybar" {
-    blur enable;
+    blur enable
     blur_radius 2
     blur_passes 5
     blur_brightness 0.8596
-    blur_contrast 1.245
+    blur_contrast 1.145
     blur_noise 0.0186
     blur_xray enable
     # blur_ignore_transparent enable;
@@ -330,17 +330,21 @@ layer_effects "waybar" {
     # corner_radius 20;
 }
 
-for_window [app_id="waylock"] {
-    opacity 0.1
-    shadows enable
-}
 
 
 # ====================================
 # Windows Rules
 # ====================================
-for_window [app_id="org.gnome.*"] opacity 0.95
-for_window [instance="code"] opacity 0.9
-for_window [app_id="wofi"] floating enable, move position center; border none; opacity 0.95
+
+# global opacity
+for_window [app_id=".*"] opacity 0.9
+
+# overwrite gnome applications
+for_window [app_id="org.gnome.*"] opacity 0.9
+for_window [app_id="wofi"] floating enable, move position center; border none; opacity 0.9; corner_radius 12
 for_window [app_id="app.zen_browser.zen" title="Picture-in-Picture"] floating enable, move position center; opacity 1.0
-for_window [app_id="foot"] opacity 1.0
+for_window [app_id="foot"] opacity 0.85
+# floating for java apps
+for_window [app_id="java"] floating enable, move position center; opacity 1.0
+
+

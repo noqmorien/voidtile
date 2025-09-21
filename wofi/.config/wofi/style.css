@@ -60,7 +60,7 @@ window {
 
 #entry:selected {
     background-color: @primary;
-    color: @content;
+    color: @base0;
     border: none;
     border-radius: 6px;
     outline: none;
@@ -74,5 +74,5 @@ window {
 }
 
 #text:selected {
-    color: @content;
+    color: @base0;
 }
