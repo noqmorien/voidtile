@@ -16,9 +16,9 @@ set $lock swaylock
 # ====================================
 
 # sway session issues
-exec --no-startup-id xdg-desktop-portal
-exec --no-startup-id xdg-desktop-portal-wlr
-exec --no-startup-id xdg-desktop-portal-gtk
+# exec --no-startup-id xdg-desktop-portal
+# exec --no-startup-id xdg-desktop-portal-wlr
+# exec --no-startup-id xdg-desktop-portal-gtk
 
 exec --no-startup-id pipewire 
 exec --no-startup-id nm-applet
@@ -337,14 +337,16 @@ layer_effects "waybar" {
 # ====================================
 
 # global opacity
-for_window [app_id=".*"] opacity 0.9
+for_window [app_id=".*"] opacity 0.85;
 
 # overwrite gnome applications
-for_window [app_id="org.gnome.*"] opacity 0.9
-for_window [app_id="wofi"] floating enable, move position center; border none; opacity 0.9; corner_radius 12
-for_window [app_id="app.zen_browser.zen" title="Picture-in-Picture"] floating enable, move position center; opacity 1.0
-for_window [app_id="foot"] opacity 0.85
+for_window [app_id="org.gnome.*"] opacity 0.9;
+for_window [app_id="wofi"] floating enable, move position center; border none; opacity 0.9;
+for_window [app_id="app.zen_browser.zen"] opacity 1.0
+for_window [app_id="app.zen_browser.zen" title="Picture-in-Picture"] floating enable, move position center; opacity 1.0;
+for_window [app_id="foot"] opacity 0.95;
+
 # floating for java apps
-for_window [app_id="java"] floating enable, move position center; opacity 1.0
+for_window [app_id="java"] floating enable, move position center; opacity 1.0;
 
 
