@@ -28,9 +28,8 @@ exec --no-startup-id waybar
 exec --no-startup-id swaync
 exec --no-startup-id swww img --transition-type "any" $HOME/.config/wallpaper/third.png
 exec swayidle -w \
-            timeout 300 $lock \
+            timeout 10800 $lock \
             before-sleep $lock
-
 
 exec_always --no-startup-id autotiling
 # part of sway fix session issues
@@ -283,8 +282,8 @@ default_border pixel 1
 
 # Gaps
 smart_gaps off
-gaps inner 16
-gaps outer 12
+gaps inner 12
+gaps outer 1
 
 # Set border colors (normal, focused, urgent, background)
 client.focused          #a7c080 #a7c080 #a7c080 #a7c080

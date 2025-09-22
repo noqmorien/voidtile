@@ -1,5 +1,4 @@
-{
-  "layer": "top",
+{ "layer": "top",
   "reload_style_on_change": true,
   "gtk-layer-shell": true,
   "modules-left": ["custom/arch", "sway/workspaces"],
@@ -37,14 +36,10 @@
     "format-icons": {
       "focused": "",
       "urgent": "",
-      "2": "",      // Terminal
-      "3": "",      // Code
-      "4": "",      // Debug
-      "1": "",      // Browser
-      "5": ""       // Games
+      "default": ""
     },
     "persistent-workspaces": {
-      "1": [], "2": [], "3": [], "4": [], "5": []
+      "1": [], "2": [], "3": [], "4": [], "5": [], "6": [], "7": [], "8": [], "9": []
     }
   },
 

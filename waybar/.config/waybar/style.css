@@ -1,8 +1,8 @@
 * {
     border: none;
     font-family: 'MartianMono Nerd Font', 'Symbols Nerd Font Mono';
-    font-size: 12px;
-    min-height: 0px;
+    font-size: 11px;
+    min-height: 19px;
 }
 
 window#waybar {
@@ -22,18 +22,19 @@ tooltip {
 #custom-arch, #workspaces, #clock, #network, #tray {
     border-top-right-radius: 1px;
     border-bottom-right-radius: 1px;
-    margin-right: 4px;
+    margin-right: 21px;
 }
 
 /* Rounded Left */
 #custom-arch, #workspaces, #clock, #cpu {
     border-top-left-radius: 1px;
     border-bottom-left-radius: 1px;
-    margin-left: 4px;
+    margin-left: 21px;
 }
 
 #custom-search {
-    margin-left: 6px;
+    font-size: 9px;
+    margin-left: 8px;
     margin-right: 8px;
 }
 
@@ -45,10 +46,6 @@ tooltip {
     padding: 4px 6px 4px 6px;
 }
 
-#tray .nm-applet {
-    color: #2f383e;
-}
-
 /* Custom Arch */
 #custom-arch {
     color: #a7c080; /* Green / Arch logo */
@@ -57,9 +54,12 @@ tooltip {
     font-size: 14px;
 }
 
+#workspaces {
+}
+
 /* Workspaces */
 #workspaces button {
-    padding: 4px 2px 4px 2px;
+    padding: 4px 0px 4px 0px;
     margin-left: 0px;
     margin-right: 0px;
     color: #D3C6AA;
