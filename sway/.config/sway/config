@@ -344,6 +344,8 @@ for_window [app_id="org.gnome.*"] opacity 0.9;
 for_window [app_id="wofi"] floating enable; move position center; border none; opacity 0.9;
 for_window [app_id="com.obsproject.Studio"] opacity 1.0;
 for_window [app_id="app.zen_browser.zen"] opacity 1.0
+for_window [app_id="virt-manager"] opacity 1.0
+
 for_window [app_id="foot"] {
     blur_brightness 0.85
     opacity 0.9;

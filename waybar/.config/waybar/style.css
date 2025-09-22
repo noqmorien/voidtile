@@ -19,23 +19,21 @@ tooltip {
 }
 
 /* Rounded Right */
-#custom-arch, #workspaces, #clock, #network, #tray {
+#custom-arch {
     border-top-right-radius: 1px;
     border-bottom-right-radius: 1px;
-    margin-right: 21px;
+    margin-right: 0px;
 }
 
 /* Rounded Left */
-#custom-arch, #workspaces, #clock, #cpu {
+#clock {
     border-top-left-radius: 1px;
     border-bottom-left-radius: 1px;
-    margin-left: 21px;
+    margin-left: 12px;
 }
 
 #custom-search {
     font-size: 9px;
-    margin-left: 8px;
-    margin-right: 8px;
 }
 
 /* Box */
@@ -55,11 +53,12 @@ tooltip {
 }
 
 #workspaces {
+    font-size: 32px;
 }
 
 /* Workspaces */
 #workspaces button {
-    padding: 4px 0px 4px 0px;
+    padding: 4px 1.5px 4px 1.5px;
     margin-left: 0px;
     margin-right: 0px;
     color: #D3C6AA;
