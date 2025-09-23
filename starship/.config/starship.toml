@@ -3,11 +3,12 @@
 add_newline = false
 continuation_prompt = "[󰞷](dimmed white)[](bold dimmed white)[](bold dimmed magenta)[󰅂](bold dimmed blue)"
 
-right_format = """"""
+right_format = """
+"""
 
 [character]
-success_symbol = "[󰮺](bold green)"
-error_symbol = "[󰮺](bold red)"
+success_symbol = "[](reen)"
+error_symbol = "[](red)"
 
 [package]
 disabled = false
@@ -46,7 +47,7 @@ format = "$all_status$ahead_behind"
 
 [hostname]
 ssh_only = false
-format =  "on [](bold blue) "
+format =  "on [](bold green) [$hostname](bold magenta) "
 trim_at = ".localdomain"
 disabled = false
 
@@ -65,15 +66,17 @@ format = '[](blue) [$time](dimmed blue) '
 time_format = "%T"
 
 [username]
-style_user = "white bold"
-style_root = "black bold"
-format = "[](green bold green) [$user]($style) "
+style_user = "cyan bold"
+style_root = "red bold"
+format = "[](bold magenta) [$user]($style) "
 disabled = false
 show_always = true
 
 [directory]
-truncation_length = 2
-# truncation_symbol = "./"
+read_only = ''
+truncation_length = 3
+truncation_symbol = ''
+format = "[](bold blue) [$path](green) [$read_only]($read_only_style)"
 disabled = false
 
 [rust]
