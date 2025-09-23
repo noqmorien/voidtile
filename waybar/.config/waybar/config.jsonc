@@ -2,7 +2,7 @@
   "reload_style_on_change": true,
   "gtk-layer-shell": true,
   "modules-left": ["custom/arch", "sway/workspaces"],
-  "modules-center": ["mpris"],
+  "modules-center": [],
   "modules-right": ["tray", "backlight", "pulseaudio", "battery", "network", "custom/search", "custom/quick-panel", "clock"],
 
   "mpris": {

@@ -278,16 +278,16 @@ bindsym $mod+Shift+Print exec  $HOME/.local/bin/voidot ss --save-select
 # ====================================
 # Styles
 # ====================================
-default_border pixel 1
+default_border pixel 2
 
 # Gaps
 smart_gaps off
-gaps inner 12
+gaps inner 3
 gaps outer 1
 
 # Set border colors (normal, focused, urgent, background)
-# client.focused          #a7c080 #a7c080 #a7c080 #a7c080
-client.focused #2D353B #2D353B #2D353B #2D353B
+# client.focused #2D353B #2D353B #2D353B #2D353B
+client.focused          #83C092 #83C092 #83C092 #83C092
 client.focused_inactive #2D353B #2D353B #2D353B #2D353B
 client.unfocused        #2D353B #2D353B #2D353B #2D353B
 client.urgent           #e67e80 #e67e80 #e67e80 #e67e80
@@ -300,7 +300,7 @@ client.urgent           #e67e80 #e67e80 #e67e80 #e67e80
 # ====================================
 
 # Radius
-corner_radius 8
+corner_radius 0
 
 # Blur
 blur enable
