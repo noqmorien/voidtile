@@ -6,11 +6,11 @@
 }
 
 window#waybar {
-    background: #2f383e; /* Everforest Medium background */
-    margin: 0px 12px 0px 12px;
+    background: transparent; /* #2f383e;  Everforest Medium background */
 }
 
 window#waybar > box {
+    padding: 12px 0px 3px 0px;
 }
 
 tooltip {
@@ -19,21 +19,21 @@ tooltip {
 }
 
 /* Rounded Right */
-#custom-arch {
-    border-top-right-radius: 1px;
-    border-bottom-right-radius: 1px;
-    margin-right: 0px;
+#custom-arch, #workspaces, #clock, #network, #tray {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin-right: 12px;
 }
 
 /* Rounded Left */
-#clock {
-    border-top-left-radius: 1px;
-    border-bottom-left-radius: 1px;
+#clock, #custom-arch, #workspaces, #tray, #backlight  {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
     margin-left: 12px;
 }
 
 #custom-search {
-    font-size: 9px;
+    font-size: 12px;
 }
 
 /* Box */
@@ -41,7 +41,7 @@ tooltip {
     color: #d3c6aa; /* Text */
     background: #2f383e; /* Background */
     font-size: 13px;
-    padding: 4px 6px 4px 6px;
+    padding: 3px 12px 3px 12px;
 }
 
 /* Custom Arch */

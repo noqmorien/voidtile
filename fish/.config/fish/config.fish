@@ -10,6 +10,7 @@ function setup_user_path
     fish_add_path ~/.local/bin
     fish_add_path ~/.cargo/bin
     fish_add_path ~/.bun/bin
+    fish_add_path ~/.flutter/bin
     # this for personal packages
     fish_add_path /opt/pkgs/bin
 end
@@ -61,7 +62,12 @@ function fish_greeting
         starship init fish | source
         enable_transience
     end
+    if command -q fzf 
+        fzf --fish | source
+    end
     if command -q fastfetch
         fastfetch
     end
 end
+
+fish_add_path /home/bluespada/.spicetify

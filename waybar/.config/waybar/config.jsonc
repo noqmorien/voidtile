@@ -3,7 +3,7 @@
   "gtk-layer-shell": true,
   "modules-left": ["custom/arch", "sway/workspaces"],
   "modules-center": [],
-  "modules-right": ["tray", "backlight", "pulseaudio", "battery", "network", "custom/search", "custom/quick-panel", "clock"],
+  "modules-right": ["tray", "backlight", "pulseaudio", "battery", "network", "clock"],
 
   "mpris": {
     "format": "{player_icon}  {title} - {artist}",
@@ -18,18 +18,19 @@
   },
 
   "custom/arch": {
-    "format": "<span color='#a7c080'></span> ",
+    "format": "<span color='#a7c080'>  </span> ",
     "tooltip": false
   },
 
   "sway/window": {
-    "format": "{title}",
+    "format": " <span color='#a7c080'></span> ({app_id} - {shell} )",
+    "tooltip": false,
     "icon": false,
     "icon-size": 14
   },
 
   "sway/workspaces": {
-    "format": "{icon}",
+    "format": " {icon} ",
     "tooltip": false,
     "all-output": false,
     "format-icons": {
